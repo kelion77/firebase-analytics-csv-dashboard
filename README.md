@@ -1,113 +1,115 @@
 # Firebase Analytics CSV Dashboard
 
-Firebase Analytics에서 내보낸 CSV 데이터를 분석하고 시각화하는 대시보드 도구입니다.
+A dashboard tool for analyzing and visualizing CSV data exported from Firebase Analytics.
 
-## 주요 기능
+[한국어 버전 (Korean)](README.ko.md)
 
-- 📊 **CSV 기반 데이터 분석**: Firebase Analytics에서 내보낸 CSV 파일을 직접 분석
-- 📈 **인터랙티브 대시보드**: 실시간 차트와 테이블로 데이터 시각화
-- 📱 **Screen View 분석**: 화면별 조회수 및 참여도 분석
-- 💫 **User Engagement 분석**: 사용자 참여 패턴 분석
-- 🎯 **Feature Usage 분석**: 모든 기능의 사용 패턴 통합 분석
-- 📥 **리포트 다운로드**: CSV 및 HTML 형식으로 리포트 다운로드
-- 📁 **다중 프로젝트 지원**: 여러 프로젝트의 CSV 데이터를 폴더별로 관리
+## Features
 
-## 시작하기
+- **CSV-based Data Analysis**: Direct analysis of CSV files exported from Firebase Analytics
+- **Interactive Dashboard**: Real-time charts and tables for data visualization
+- **Screen View Analysis**: Screen-by-screen view counts and engagement analysis
+- **User Engagement Analysis**: User engagement pattern analysis
+- **Feature Usage Analysis**: Comprehensive analysis of all feature usage patterns
+- **Report Download**: Download reports in CSV and HTML formats
+- **Multi-project Support**: Manage CSV data from multiple projects by folder
 
-### 설치
+## Getting Started
+
+### Installation
 
 ```bash
 npm install
 ```
 
-### 데이터 준비
+### Data Preparation
 
-1. Firebase Analytics에서 CSV 파일을 내보내기
-2. `data/{프로젝트명}/` 폴더에 CSV 파일 복사
+1. Export CSV files from Firebase Analytics
+2. Copy CSV files to `data/{project-name}/` folder
 
-필수 파일:
-- `Firebase_overview.csv` (또는 `Firebase_overview1.csv` 등)
-- `Events_Event_name.csv` (또는 `Events_Event_name1.csv` 등)
-- `Pages_and_screens_Page_title_and_screen_class.csv` (또는 `Pages_and_screens_Page_title_and_screen_class1.csv` 등)
+Required files:
+- `Firebase_overview.csv` (or `Firebase_overview1.csv`, etc.)
+- `Events_Event_name.csv` (or `Events_Event_name1.csv`, etc.)
+- `Pages_and_screens_Page_title_and_screen_class.csv` (or `Pages_and_screens_Page_title_and_screen_class1.csv`, etc.)
 
-### 실행
+### Running
 
 ```bash
 npm run dev
 ```
 
-브라우저에서 `http://localhost:3000` 접속
+Open `http://localhost:3000` in your browser
 
-## 사용 방법
+## Usage
 
-### 1. 데이터 추가
+### 1. Adding Data
 
 ```bash
-# 프로젝트별로 폴더 생성
+# Create folder for each project
 mkdir -p data/my-project
 
-# CSV 파일 복사
+# Copy CSV files
 cp /path/to/csv/*.csv data/my-project/
 ```
 
-### 2. 대시보드 사용
+### 2. Using the Dashboard
 
-- 상단의 "Data Source" 드롭다운에서 프로젝트 선택
-- 자동으로 해당 프로젝트의 데이터가 로드됨
-- 리포트 다운로드 버튼으로 CSV/HTML 리포트 생성
+- Select a project from the "Data Source" dropdown at the top
+- Data for the selected project will be loaded automatically
+- Generate CSV/HTML reports using the download buttons
 
-## 프로젝트 구조
+## Project Structure
 
 ```
-├── data/                    # CSV 데이터 폴더
-│   ├── default/            # 기본 프로젝트
-│   └── {project-name}/     # 다른 프로젝트들
+├── data/                    # CSV data folders
+│   ├── default/            # Default project
+│   └── {project-name}/     # Other projects
 ├── src/
-│   ├── app/                # Next.js 앱 라우트
-│   ├── components/         # React 컴포넌트
-│   ├── repositories/       # 데이터 레포지토리
-│   └── services/           # 비즈니스 로직
+│   ├── app/                # Next.js app routes
+│   ├── components/         # React components
+│   ├── repositories/       # Data repositories
+│   └── services/           # Business logic
 └── README.md
 ```
 
-## 분석 기능
+## Analysis Features
 
 ### Screen View Analysis
-- 화면별 조회수 분석
-- 사용자당 평균 조회수
-- 평균 참여 시간
+- Screen-by-screen view count analysis
+- Average views per user
+- Average engagement time
 
 ### User Engagement Analysis
-- 화면별 참여도 분석
-- 참여 이벤트 수
-- 사용자 참여 패턴
+- Screen-by-screen engagement analysis
+- Engagement event counts
+- User engagement patterns
 
 ### Feature Usage Analysis
-- 모든 기능의 통합 분석
-- Feature 타입별 분류 (screen, menu, action, event)
-- 관련 화면 매핑
+- Comprehensive analysis of all features
+- Feature type classification (screen, menu, action, event)
+- Related screen mapping
 
-## 리포트
+## Reports
 
-### CSV 리포트
-- 모든 분석 데이터를 CSV 형식으로 다운로드
-- Excel에서 열어서 추가 분석 가능
+### CSV Report
+- Download all analysis data in CSV format
+- Can be opened in Excel for further analysis
 
-### HTML 리포트
-- 시각적으로 정리된 리포트
-- 차트 포함
-- 인쇄 가능
+### HTML Report
+- Visually organized report
+- Includes charts
+- Printable format
 
-## 기술 스택
+## Tech Stack
 
-- **Next.js 14**: React 프레임워크
-- **TypeScript**: 타입 안정성
-- **Tailwind CSS**: 스타일링
-- **Recharts**: 차트 라이브러리
-- **Chart.js**: HTML 리포트용 차트
-- **csv-parse**: CSV 파싱
-- **date-fns**: 날짜 처리
+- **Next.js 14**: React framework
+- **TypeScript**: Type safety
+- **Tailwind CSS**: Styling
+- **Recharts**: Chart library
+- **Chart.js**: Charts for HTML reports
+- **csv-parse**: CSV parsing
+- **date-fns**: Date handling
 
-## 라이선스
+## License
 
 MIT
